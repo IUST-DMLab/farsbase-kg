@@ -1,9 +1,9 @@
 [submodule "essential/service-utils"]
 	path = essential/service-utils
-	url = https://github.com/IUST-DMLab/service-utils
+	url = git@github.com:IUST-DMLab/service-utils.git
 [submodule "search/searcher"]
 	path = search/searcher
-	url = https://github.com/IUST-DMLab/searcher
+	url = git@github.com:IUST-DMLab/searcher.git
 [submodule "search/search-services"]
 	path = search/search-services
 	url = git@github.com:IUST-DMLab/search-services.git
