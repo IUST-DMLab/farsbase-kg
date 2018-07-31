@@ -49,18 +49,9 @@
 [submodule "gui/pkg-ui"]
 	path = gui/pkg-ui
 	url = git@github.com:IUST-DMLab/pkg-ui.git
-[submodule "gui/mapping-ui"]
-	path = gui/mapping-ui
-	url = git@github.com:IUST-DMLab/mapping-ui.git
 [submodule "gui/kg-ui"]
 	path = gui/kg-ui
 	url = git@github.com:IUST-DMLab/kg-ui.git
-[submodule "gui/expert-ui"]
-	path = gui/expert-ui
-	url = git@github.com:IUST-DMLab/expert-ui.git
-[submodule "gui/evaluation-ui"]
-	path = gui/evaluation-ui
-	url = git@github.com:IUST-DMLab/evaluation-ui.git
 [submodule "update/update_manager"]
 	path = update/update_manager
 	url = git@github.com:IUST-DMLab/update_manager.git
@@ -106,3 +97,12 @@
 [submodule "essential/utils"]
 	path = essential/utils
 	url = git@github.com:IUST-DMLab/utils.git
+[submodule "gui/evaluation-ui"]
+	path = gui/evaluation-ui
+	url = git@github.com:IUST-DMLab/evaluation-ui.git
+[submodule "gui/expert-ui"]
+	path = gui/expert-ui
+	url = git@github.com:IUST-DMLab/expert-ui.git
+[submodule "gui/mapping-ui"]
+	path = gui/mapping-ui
+	url = git@github.com:IUST-DMLab/mapping-ui.git
