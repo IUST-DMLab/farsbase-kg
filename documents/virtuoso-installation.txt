@@ -1,0 +1,76 @@
+# Last used 2017-01-21, Ubuntu 16.10
+
+http://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VOSUbuntuNotes
+http://www.slideshare.net/YusukeKomiyama/virtuoso-7-install-guide-for-ubuntu-1210-64bit
+
+#
+apt-get install dpkg-dev build-essential
+apt-get install autoconf automake bison checkinstall flex gawk gperf libiodbc2 libiodbc2-dev libssl-dev libtool python-dev
+
+git clone https://github.com/openlink/virtuoso-opensource.git
+cd virtuoso-opensource
+git checkout stable/7 # Needed - flex/bison error in stable
+./autogen.sh
+./configure --with-layout=debian
+make
+make install
+
+# Test that virt starts OK --- ctrl-c to close after verifying
+virtuoso-t -fd -c /var/lib/virtuoso-opensource-7/db/virtuoso.ini
+
+
+
+Copy init and defaults from virtuoso-opensource/debian
+cp debian/virtuoso-opensource-7.default /etc/default/virtuoso-opensource-7
+cp debian/virtuoso-opensource-7.init /etc/init.d/virtuoso-opensource-7
+chmod ugo+rx /etc/init.d/virtuoso-opensource-7 /etc/default/virtuoso-opensource-7
+update-rc.d virtuoso-opensource-7 defaults
+
+The defaults file doesn't seem to match up with the stable/7 config -- edit and replace
+the provided DAEMON_OPTS line with this one::
+
+
+vi /etc/default/virtuoso-opensource-7 
+
+-- And change DAEMON_OPTS to
+
+DAEMON_OPTS="+wait +configfile /var/lib/virtuoso-opensource-7/db/virtuoso.ini"
+
+
+Restart machine to check that everything came up on it's own, check sparql by going to
+
+http://127.0.0.1:8890/sparql
+
+
+Additionally
+
+If you want to expose the SPARQL endpoint publically, the following APACHE stanza can be used to proxy
+
+  <LocationMatch "/sparql">
+    # ProxyPass sparql http://localhost:8890/sparql
+    ProxyPass http://localhost:8890/sparql
+    # ProxyPassReverse /sparql http://localhost:8890/sparql
+    ProxyPassReverse http://localhost:8890/sparql
+    Header add "Access-Control-Allow-Origin" "*"
+  </LocationMatch>
+  
+
+And this one for conductor
+
+  <LocationMatch "/conductor">
+    # ProxyPass sparql http://localhost:8890/sparql
+    ProxyPass http://localhost:8890/conductor
+    # ProxyPassReverse /sparql http://localhost:8890/sparql
+    ProxyPassReverse http://localhost:8890/conductor
+  </LocationMatch>
+
+
+Conductor default account is dba/dba -- please **DO** log in and change the password!!!
+
+
+Useful info here on creating a DBPedia clone
+
+https://joernhees.de/blog/2014/11/10/setting-up-a-local-dbpedia-2014-mirror-with-virtuoso-7-1-0/
+
+
+

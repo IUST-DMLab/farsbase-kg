@@ -1,0 +1,73 @@
+# install requirements: databases
+install mongodb [source](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-linux/)
+install virtuoso-opensource 7 from source code [source](https://gist.githubusercontent.com/ianibo/0670970fccc7f424924f/raw/d138dfc43cf29b60a28705633db933269f44a177/gistfile1.txt)
+install mysql
+
+# copy data
+copy data from farsbase server. you can mount main server on a folder
+```
+sudo sshfs -o allow_other server@farsbase.net:/ /mnt/farsbase/
+```
+
+# restore data to the databases
+1. restore mongodb dumps by `mongorestore` command
+1. restore recommendation dump to the mysql. it's too long process.
+
+```
+mysql
+create database knowledge_graph
+exit
+```
+
+1. restore ttls file to the virtuoso: edit virtuoso.ini file and add ttl folder to the DirsAllowed
+```
+sudo nano /var/lib/virtuoso/db/virtuoso.ini
+DirsAllowed  = ., /usr/share/virtuoso-opensource-6.1/vad, /path/to/files
+```
+
+open isql and run commands:
+```
+isql 1111 dba dba
+ld_dir_all ('/path/to/files', '*.ttl', 'http://fkg.iust.ac.ir/');
+rdf_loader_run();
+```
+
+[source](https://github.com/dbpedia/dbpedia-docs/wiki/Loading-Data-Virtuoso)
+
+
+# Change GUI configurations:
+nano pkg-ui/scripts/app/config.js
+nano search-ui/scripts/app/config.js
+nano kg-ui/scripts/app/service/rest.js
+nano mapping-ui/scripts/app/config.js
+nano raw-text-ui/scripts/app/service/rest.js
+
+## Not-used UIs
+nano evaluation-ui/scripts/app/service/rest.js
+nano expert-ui/scripts/app/service/rest.js
+
+# Apache config
+see apache_configs.md file.
+
+# Connect to a server to forward a port
+```
+ssh -p 3022 -L 8093:localhost:8093 ogr@195.146.37.22
+```
+
+just browser to the http://localhost:8093 on your computer.
+
+# Create Services
+create some services like `kgexpert`, `kgfeedback`, `kgproxy`, `kgsearch`, `kgextractor`, `kgmapper`, `kgraw` and `kgstore`.
+
+sample service has been placed in current folder. you must put it into `/etc/init.d` foder with +x mode.
+
+install them to run on startup:
+```
+ sudo update-rc.d mongo defaults 95
+```
+
+# Allow user to restart the services without password
+run `sudo visudo` and add this line:
+```
+ogr     ALL = NOPASSWD: /usr/sbin/service kgmapper *
+```

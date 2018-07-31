@@ -1,0 +1,108 @@
+[submodule "essential/service-utils"]
+	path = essential/service-utils
+	url = https://github.com/IUST-DMLab/service-utils
+[submodule "search/searcher"]
+	path = search/searcher
+	url = https://github.com/IUST-DMLab/searcher
+[submodule "search/search-services"]
+	path = search/search-services
+	url = git@github.com:IUST-DMLab/search-services.git
+[submodule "search/search-normalizer"]
+	path = search/search-normalizer
+	url = git@github.com:IUST-DMLab/search-normalizer.git
+[submodule "search/log-analyzer"]
+	path = search/log-analyzer
+	url = git@github.com:IUST-DMLab/log-analyzer.git
+[submodule "search/search-feedback"]
+	path = search/search-feedback
+	url = git@github.com:IUST-DMLab/search-feedback.git
+[submodule "search/search-evaluation"]
+	path = search/search-evaluation
+	url = git@github.com:IUST-DMLab/search-evaluation.git
+[submodule "search/evaluation-services"]
+	path = search/evaluation-services
+	url = git@github.com:IUST-DMLab/evaluation-services.git
+[submodule "raw/raw-triple-extractor"]
+	path = raw/raw-triple-extractor
+	url = git@github.com:IUST-DMLab/raw-triple-extractor.git
+[submodule "raw/raw-text-services"]
+	path = raw/raw-text-services
+	url = git@github.com:IUST-DMLab/raw-text-services.git
+[submodule "raw/raw-text-access"]
+	path = raw/raw-text-access
+	url = git@github.com:IUST-DMLab/raw-text-access.git
+[submodule "raw/parse-tree-extractor"]
+	path = raw/parse-tree-extractor
+	url = git@github.com:IUST-DMLab/parse-tree-extractor.git
+[submodule "raw/rule-based-extractor"]
+	path = raw/rule-based-extractor
+	url = git@github.com:IUST-DMLab/rule-based-extractor.git
+[submodule "raw/distant-supervision-re"]
+	path = raw/distant-supervision-re
+	url = git@github.com:IUST-DMLab/distant-supervision-re.git
+[submodule "gui/search-ui"]
+	path = gui/search-ui
+	url = git@github.com:IUST-DMLab/search-ui.git
+[submodule "gui/raw-text-ui"]
+	path = gui/raw-text-ui
+	url = git@github.com:IUST-DMLab/raw-text-ui.git
+[submodule "gui/pkg-ui"]
+	path = gui/pkg-ui
+	url = git@github.com:IUST-DMLab/pkg-ui.git
+[submodule "gui/mapping-u"]
+	path = gui/mapping-u
+	url = git@github.com:IUST-DMLab/mapping-ui.git
+[submodule "gui/kg-ui"]
+	path = gui/kg-ui
+	url = git@github.com:IUST-DMLab/kg-ui.git
+[submodule "gui/expert-u"]
+	path = gui/expert-u
+	url = git@github.com:IUST-DMLab/expert-ui.git
+[submodule "gui/evaluation-u"]
+	path = gui/evaluation-u
+	url = git@github.com:IUST-DMLab/evaluation-ui.git
+[submodule "update/update_manager"]
+	path = update/update_manager
+	url = git@github.com:IUST-DMLab/update_manager.git
+[submodule "update/knowledge-runner"]
+	path = update/knowledge-runner
+	url = git@github.com:IUST-DMLab/knowledge-runner.git
+[submodule "store/knowledge-expert"]
+	path = store/knowledge-expert
+	url = git@github.com:IUST-DMLab/knowledge-expert.git
+[submodule "store/knowledge-store"]
+	path = store/knowledge-store
+	url = git@github.com:IUST-DMLab/knowledge-store.git
+[submodule "proxy"]
+	path = proxy
+	url = git@github.com:IUST-DMLab/proxy.git
+[submodule "mapper"]
+	path = mapper
+	url = git@github.com:IUST-DMLab/mapper.git
+[submodule "extractors/table-extractor"]
+	path = extractors/table-extractor
+	url = git@github.com:IUST-DMLab/table-extractor.git
+[submodule "extractors/wiki-extractor"]
+	path = extractors/wiki-extractor
+	url = git@github.com:IUST-DMLab/wiki-extractor.git
+[submodule "essential/resource-extractor-services"]
+	path = essential/resource-extractor-services
+	url = git@github.com:IUST-DMLab/resource-extractor-services.git
+[submodule "essential/resource-extractor"]
+	path = essential/resource-extractor
+	url = git@github.com:IUST-DMLab/resource-extractor.git
+[submodule "raw/JHazm"]
+	path = raw/JHazm
+	url = git@github.com:IUST-DMLab/JHazm.git
+[submodule "essential/knowledge-core"]
+	path = essential/knowledge-core
+	url = git@github.com:IUST-DMLab/knowledge-core.git
+[submodule "raw/nlp-utils"]
+	path = raw/nlp-utils
+	url = git@github.com:IUST-DMLab/nlp-utils.git
+[submodule "essential/virtuoso-connector"]
+	path = essential/virtuoso-connector
+	url = git@github.com:IUST-DMLab/virtuoso-connector.git
+[submodule "essential/utils"]
+	path = essential/utils
+	url = git@github.com:IUST-DMLab/utils.git
