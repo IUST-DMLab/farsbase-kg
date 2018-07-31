@@ -4,7 +4,7 @@ The git server is GitHub.
 
 A user has been created for ITRC to get all codes:
 username: USERNAME
-password: PASSWORD
+
 
 download the code resursively:
 
