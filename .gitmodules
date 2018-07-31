@@ -49,17 +49,17 @@
 [submodule "gui/pkg-ui"]
 	path = gui/pkg-ui
 	url = git@github.com:IUST-DMLab/pkg-ui.git
-[submodule "gui/mapping-u"]
-	path = gui/mapping-u
+[submodule "gui/mapping-ui"]
+	path = gui/mapping-ui
 	url = git@github.com:IUST-DMLab/mapping-ui.git
 [submodule "gui/kg-ui"]
 	path = gui/kg-ui
 	url = git@github.com:IUST-DMLab/kg-ui.git
-[submodule "gui/expert-u"]
-	path = gui/expert-u
+[submodule "gui/expert-ui"]
+	path = gui/expert-ui
 	url = git@github.com:IUST-DMLab/expert-ui.git
-[submodule "gui/evaluation-u"]
-	path = gui/evaluation-u
+[submodule "gui/evaluation-ui"]
+	path = gui/evaluation-ui
 	url = git@github.com:IUST-DMLab/evaluation-ui.git
 [submodule "update/update_manager"]
 	path = update/update_manager
