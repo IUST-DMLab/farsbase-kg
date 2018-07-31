@@ -1,12 +1,12 @@
 # Get Codes
-You must know Git technology to get the codes: 
-The git server is GitHub.
-
-A user has been created for ITRC to get all codes:
-username: USERNAME
 
 
-download the code resursively:
+
+
+
+
+
+download the code resursively
 
 ```bash
 git clone --recursive git@github.com:IUST-DMLab/farsbase-kg.git
