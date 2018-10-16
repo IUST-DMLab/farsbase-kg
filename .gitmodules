@@ -106,3 +106,6 @@
 [submodule "gui/mapping-ui"]
 	path = gui/mapping-ui
 	url = git@github.com:IUST-DMLab/mapping-ui.git
+[submodule "raw/stanford_ner"]
+	path = raw/stanford_ner
+	url = git@github.com:majidasgari/stanford_ner.git
