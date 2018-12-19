@@ -1,10 +1,15 @@
+# Introduction
+
+FarsBase is the first Persian multi-source knowledge graph, which isspecifically designed for semantic search engines to support Persian knowledge. FarsBase uses a diverse set of hybrid and flexibletechniques to extract and integrate knowledge from various sources, such as Wikipedia, Web tables and unstructured texts.
+
+## Links
+* [Farsbase Code](https://github.com/IUST-DMLab/farsbase-kg)
+* [Farsbase Semantic Search Engine](http://farsbase.net).
+* [A sample Farsbase resource IRI](http://fkg.iust.ac.ir/resource/علی_دایی)
+* [Last version of all RDF triples (including ontology)](http://farsbase.net/download/last_ttls.tar.gz)
+* [SPARQL Endpoint](http://farsbase.net:8890/sparql)
+
 # Get Codes
-
-
-
-
-
-
 
 download the code resursively
 
